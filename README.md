@@ -8,6 +8,6 @@ Trying to learn Vue, that's how I ended up with making this game
 * black squares don't do anything you can press them when you see a blue square
 
 ## Things to add:
-* work on the game design (currently working on)
-* time given to pick a square / time taken for the game to auto end
-* save to score board (optional)
+* work on the game design [⭕️]
+* time taken for the game to auto end [✅]
+* save to score board (optional) [🤔]
