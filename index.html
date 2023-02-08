@@ -12,7 +12,7 @@
 			<h1>{{ appName }}</h1>
 
 			<div v-if="!isPlaying && !gameOver">
-				<h2>How fast are your reflexes?</h2>
+				<!-- <h2>How fast are your reflexes?</h2> -->
 				<!-- <p>Rules here...</p> -->
 				<h3>Game rules: </h3>
 				<p v-for="rule in rules">{{ rule }}</p>
@@ -22,13 +22,15 @@
 			<div v-if="isPlaying && !gameOver">
 				<p>Number of green squares that appeared: {{ noGreenSquares }}</p>
 				<p>Your score: {{ currentScore }}</p>
+				<p>Time remaining: {{ timeRemaining }}</p>
 				<div class="soduko">
 					<div v-for="square of gameBoard" key="square.id" class="square" @click="pickSquare(square)" :class="square.color"></div>
 				</div>
 			</div>
 
 			<div v-if="gameOver">
-				<p>Final Score: {{ currentScore }} / {{ noGreenSquares }}</p>
+				<p>Time taken: {{ timeTaken }} / {{ gameTime }} seconds</p>
+				<p>Final Score: {{ currentScore }} / 20</p>
 				<p>Winning Percent: {{ winningPercent.toFixed(2) }}%</p>
 				<button @click="newGame">New Game</button>
 			</div>
