@@ -126,7 +126,7 @@ const app = {
 
 		// calculate the winning results based on changing values
 		const winningPercent = computed(() => {
-			return (currentScore.value/noGreenSquares.value)*100
+			return (currentScore.value/20)*100
 		})
 
 		// watch the changes on some variables
